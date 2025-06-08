@@ -24,6 +24,9 @@ Installation and Running:
       pip install streamlit pandas requests pydeck
       streamlit run Health-Tracker-App.py
 
+Video Walk Through:
+https://youtu.be/KXnNjQCBMJI
+
 
 
         
