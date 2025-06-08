@@ -1,91 +1,85 @@
 a. Introduction
 
-The health tracker web app by Rockingstone is a personal fitness and health system that is built with Streamlit. The app is intended for users to track their progress and monitor their fitness in various levels, such as:
+The health tracker web app is a personal fitness and health system that is built with Streamlit. 
+The app is intended for users to track their progress and monitor their fitness in various levels, such as:
 
 Diet (Caloric intake, fluid intake, Weight tracker etc)
 Some workouts focussed on strength (with more than one exercise)
 Cardio (mileage, time and calorie for a workout)
 Daily progress (presented in line and bar chart)
 Recommended cardio pathways near (biking, running, walking)
-The app is constructed by several API services, user friendly interactive widgets and a map visualization that ensures a full experience of tracking the route.
+The app is constructed by several API services, user friendly interactive widgets and a map visualization with unique trails and routes to select from.
 
 b. Usability Goals
 
-The primary use goals for the Health Tracker were:
+The primary usability goals for the Health Tracker app were:
+How It Was Addressed
+Efficacy: Monitor nutrition, exercise, cardio, and weight logs correctly
+Productivity: Allowing to do simple data entries with forms and dropdowns
+Learnability: Tabs provide a label name for clear and intuitive navigation
+Feedback: Deliver immediate success/error messages for every user action
+Uniformity: Uniform styling, form layouts, and workflows between tabs
+Low cognitive load: Use continuous forms, default values, and simple workflows
 
-Goal	How It Was Addressed
-Efficacy	Monitor nutrition, exercise, cardio, and weight logs correctly
-Productivity	Allowing to do simple data entries with forms and dropdowns
-Learnability	Tabs provide a label name for clear and intuitive navigation
-Feedback	Deliver immediate success/error messages for every user action
-Uniformity	Uniform styling, form layouts, and workflows between tabs
-Low cognitive load	Use continuous forms, default values, and simple workflows
 c. Design Process
-
 Step 1 — Sketching:
 App tabs brainstormed and put together, and the simple logic flow.
 Split app into 5 main tabs:
-
 Profile
 Nutrition
 Cardio
 Strength
 Progress
+
 Step 2 — Wireframes:
 Roughly planned placement for inputs, outputs, charts, maps, etc.
 
 Step 3 — Implementation:
-
 Began by creating each tab separately.
 Added API calls for calories and exercises.
 Included charts for weight and calories growth.
 Included alternative route suggestion maps using st.map() to meet map requirements.
 Tested all features frequently during development.
+
 d. API Integration
-
 The app uses two APIs from API Ninjas:
-
 API	Purpose
 CaloriesBurned API	Estimates calories burned given an activity type and duration
 Exercise API	Get exercises for selected muscle group
 Challenges Encountered:
-
 Formatting API data correctly for Streamlit forms.
 Parsing JSON responses for total calories and workout names.
 Handling empty datasets from API responses.
+
 e. Interactive Widgets Used
-
 The app is enriched with many different Streamlit widgets to explore full interactivity:
-
 Widget	Purpose
-st.text_input()	Name and city of user entry
-st.number_input()	Calories, water, weight, reps, sets, time, distance
-st.radio()	Gender selection
-st.selectbox()	Activity type, goal, muscle group, exercises, suggested routes
-st.slider()	Previously used for sleep tracking but removed for simplicity
-st.button()	Form submissions, logging, saving workouts
-st.form()	Controlled multiple-input submissions
-st.map()	Maps recommended cardio paths
+st.text_input():	Name and city of user entry
+st.number_input():	Calories, water, weight, reps, sets, time, distance
+st.radio():	Gender selection
+st.selectbox():	Activity type, goal, muscle group, exercises, suggested routes
+st.slider():	Previously used for sleep tracking but removed for simplicity
+st.button():	Form submissions, logging, saving workouts
+st.form():	Controlled multiple-input submissions
+st.map():	Maps recommended cardio paths
+
 f. HCI Design Principles Applied
-
 HCI Principle	Implementation
-Visibility	Navigate with clearly labelled tabs
-Feedback	Instantaneous st.success(), st.error(), st.warning() boxes
-Consistency	Same form layouts across Nutrition, Strength, Cardio
-Error Prevention	Pre-defined min/max for number inputs
-User Control	Different entry options for diverse workout types
-Aesthetic & Minimalist Design	Simple layout with minimal information per tab
-Progressive Disclosure	Forms divided into logical sections with tabs & collapsible regions
+Visibility: Navigate with clearly labelled tabs
+Feedback: Instantaneous st.success(), st.error(), st.warning() boxes
+Consistency: Same form layouts across Nutrition, Strength, Cardio
+Error Prevention: Pre-defined min/max for number inputs
+User Control: Different entry options for diverse workout types
+Aesthetic & Minimalist Design: Simple layout with minimal information per tab
+Progressive Disclosure: Forms divided into logical sections with tabs & collapsible regions
+
 h. Conclusion
-
-
 HCI (Human-Computer Interaction) design guidelines
 Third-party API integration and data parsing
 Session state management with st.session_state
 Multi-tab webapps using Streamlit
 Building charts and maps with Streamlit’s built-in visualisation
 Future Improvements:
-
 Add user authentication for multiple users.
 Store data permanently in a cloud-based database.
 Allow users to upload their workout plans.
