@@ -1,0 +1,29 @@
+Harold Inirio
+Human Computer Interaction
+June 08, 2025
+
+The Health Tracker App allows users to input data and have it represent their progress.
+  Consist of: 
+    - Nutrition Logging : Calorie and water intake
+    - Cardio Logging : Cardio traing in the form of running, biking, swimming, rowing, and walking
+    - Strength Logging: Records the workouts, and weight the user completes
+    - Progress tracking with charts
+
+  Features:
+    - API Keys:
+      CaloriesBurned API (API Ninjas)
+      Exercise API (API Ninjas)
+    - Cardio Map (With locations located in South Florida)
+    - Line Chart to track weight
+    - Bar Graph to track calorie intake ( important to intake the same amount of calories per day, but not required, the body works on a weekly basis if you slack off one day you can make it up the next day).
+    - Multitab feautes on Streamlit
+    - Multiple user interactions and inputs
+
+Installation and Running:
+    - required to install streamlit and pydeck
+      pip install streamlit pandas requests pydeck
+      streamlit run Health-Tracker-App.py
+
+
+
+        
